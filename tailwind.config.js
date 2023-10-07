@@ -19,6 +19,7 @@
         'sans': ['Ubuntu', 'sans-serif'],
         'serif': ['Ubuntu', 'serif'],
         'mono': ['Ubuntu', 'monospace'],
+        'poppins': ['Poppins', 'sans-serif'],
       },
       extend: {},
     },

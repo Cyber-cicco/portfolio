@@ -10,7 +10,7 @@ export const cursorBlink = () => {
   }, 500);
 }
 
-export const twoSecondCursorBlink = async () => {
+export const transitionCursorBlink = async () => {
   const cursor = document.querySelector('#cursor');
   let i = 0;
   return new Promise((resolve) => {
@@ -25,7 +25,7 @@ export const twoSecondCursorBlink = async () => {
         resolve();
       }
       i++;
-    }, 500);
+    }, 300);
 
   })
 }

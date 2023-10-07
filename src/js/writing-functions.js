@@ -29,7 +29,7 @@ export const titleWriting = async () => {
         clearInterval(interval);
         resolve();
       }
-    }, 30);
+    }, 20);
   })
 }
 export const subtitleWriting = async () => {
@@ -54,7 +54,7 @@ export const subtitleWriting = async () => {
         clearInterval(interval);
         resolve();
       }
-    }, 30);
+    }, 20);
   })
 }
 export const descriptionWriting = async () => {
@@ -65,6 +65,7 @@ export const descriptionWriting = async () => {
   cursor.id = 'cursor';
   cursor.className = 'bg-white h-8 w-4 self-end';
   descriptionDiv.id = 'description';
+  descriptionDiv.className = "text-center";
   wrapper.appendChild(descriptionDiv);
   wrapper.appendChild(cursor);
   wrapper.id = 'description-wrapper';
@@ -82,6 +83,6 @@ export const descriptionWriting = async () => {
         console.log(presentationContainer.style)
         resolve();
       }
-    }, 30);
+    }, 20);
   })
 }
