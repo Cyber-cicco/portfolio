@@ -2,17 +2,21 @@ import { titleWriting } from './js/writing-functions.js';
 import { cursorBlink, transitionCursorBlink } from './js/cursor-functions.js';
 import { subtitleWriting } from './js/writing-functions.js';
 import { descriptionWriting } from './js/writing-functions.js';
+import { loadCanvas } from './lib/particles.js';
 
-const btnAPropos = document.querySelector('#a-propos-btn')
+const elAccueil = document.querySelectorAll('#nav-accueil')
+const accueil = document.querySelector('#accueil')
+
+const elAPropos = document.querySelectorAll('#nav-a-propos')
 const aPropos = document.querySelector('#a-propos')
 
-const btnProjets = document.querySelector('#projets-btn')
+const elProjets = document.querySelectorAll('#nav-projets')
 const projets = document.querySelector('#projets')
 
-const btnCompetences = document.querySelector('#competences-btn')
+const elCompetences = document.querySelectorAll('#nav-competences')
 const competences = document.querySelector('#competences')
 
-const btnExperiences = document.querySelector('#experiences-btn')
+const elExperiences = document.querySelectorAll('#nav-experiences')
 const experiences = document.querySelector('#experiences')
 
 const scroll = {
@@ -25,24 +29,24 @@ document.onload = async function() {
   await subtitleWriting();
   await transitionCursorBlink();
   await descriptionWriting();
+  //setTimeout(loadCanvas, 230);  
   cursorBlink();
 }();
 
-btnAPropos.addEventListener("click", (e) => {
-  aPropos.scrollIntoView(scroll);
-})
+const scroller = (element, scrollElement) =>{
+  element.forEach((e) => {
+    e.addEventListener("click", (e) => {
+      scrollElement.scrollIntoView(scroll);
+    })
+  })
+}
 
-btnCompetences.addEventListener("click", (e) => {
-  competences.scrollIntoView(scroll);
-})
+scroller(elAccueil, accueil);
+scroller(elAPropos, aPropos);
+scroller(elCompetences, competences)
+scroller(elProjets, projets)
+scroller(elExperiences, experiences)
 
-btnExperiences.addEventListener("click", (e) => {
-  experiences.scrollIntoView(scroll);
-})
-
-btnProjets.addEventListener("click", (e) => {
-  projets.scrollIntoView(scroll);
-})
 
 let prevScrollpos = window.pageYOffset;
 window.onscroll = function() {

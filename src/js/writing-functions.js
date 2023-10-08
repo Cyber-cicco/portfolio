@@ -4,7 +4,7 @@ const presentationContainer = document.getElementById("presentation")
 const portfolioContent = {
   title: 'Bienvenue.',
   subtitle: 'Mon nom est Abel Ciccoli.',
-  description: 'Je suis concepteur et développeur d\'applications fullstack.'
+  description: 'Voici mon portfolio'
 }
 
 export const titleWriting = async () => {
