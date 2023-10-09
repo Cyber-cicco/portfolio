@@ -13,21 +13,36 @@
 <body class="bg-blue-700">
   <canvas class="absolute z-0 top-0 left-0" id="canvas">
   </canvas>
-  <div class="absolute top-0 left-0">
+  <div class="absolute top-0 left-0 w-full">
   <main class="z-30 bg-blue-700 bg-opacity-50 h-screen">
     <nav id="navbar"
-      class="fixed transition-top top-0 h-fit left-0 w-full flex px-8 justify-between items-center flex-row bg-opacity-50 bg-black">
-      <div class="flex flex-row">
+      class="fixed transition-top top-0 h-[70px] left-0 w-full flex lg:px-8 lg:justify-between justify-end items-center flex-row bg-opacity-70 bg-black">
+      <div class="flex flex-row w-4/5 pl-2">
         <h1 class="font-poppins text-white">Ciccoli A. Développeur fullstack</h1>
       </div>
-      <li class="flex row transition:">
+      <li class="flex-none hidden lg:flex">
         <ol id="nav-accueil" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">Accueil</ol>
         <ol id="nav-a-propos" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">A propos</ol>
         <ol id="nav-projets" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">Projets</ol>
         <ol id="nav-competences" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">Compétences</ol>
         <ol id="nav-experiences" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">Expériences</ol>
+        <ol id="nav-contact" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">Contact</ol>
       </li>
+      <div id="bourger" class="lg:hidden flex flex-col bg-white bg-opacity-30 rounded-md m-1 w-[70px] gap-2 p-2 self-end">
+        <div class="bg-white w-full px-2 h-[5px]"></div>
+        <div class="bg-white w-full px-2 h-[5px]"></div>
+        <div class="bg-white w-full px-2 h-[5px]"></div>
+        <div class="bg-white w-full px-2 h-[5px]"></div>
+      </div>
     </nav>
+      <li id="nav-phone" class="hidden w-[200px] h-fit top-[70px] bg-black bg-opacity-70 border-2 border-black text-center right-0 fixed">
+        <ol id="nav-accueil" class="text-lg text-white pb-2 pt-4 bg-opacity-50 h-full cursor-pointer">Accueil</ol>
+        <ol id="nav-a-propos" class="text-lg text-white py-2 bg-opacity-50h-full cursor-pointer">A propos</ol>
+        <ol id="nav-projets" class="text-lg text-white py-2 bg-opacity-50 h-full cursor-pointer">Projets</ol>
+        <ol id="nav-competences" class="text-lg text-white py-2 bg-opacity-50 h-full cursor-pointer">Compétences</ol>
+        <ol id="nav-experiences" class="text-lg text-white py-2 bg-opacity-50h-full cursor-pointer">Expériences</ol>
+        <ol id="nav-contact" class="text-lg text-white pt-2 pb-4 bg-opacity-50 h-full cursor-pointer">Contact</ol>
+      </li>
       <div id="accueil" class="flex z-10 flex-col justify-center h-2/3 items-center">
         <div class="flex p-10 justify-center items-center">
           <div id="text-container"
@@ -37,7 +52,7 @@
         </div>
       </div>
       <div id="presentation" class="flex w-full justify-center h-1/3 opacity-0">
-        <div class="flex flex-col lg:flex-row w-4/5 justify-center gap-10 h-1/2">
+        <div class="flex flex-col lg:flex-row w-4/5 justify-center gap-5 lg:gap-10 h-1/2">
           <button id="nav-a-propos"
             class="rounded-lg text-lg text-blue-300 border-2 px-5 h-fit py-2 flex justify-center items-center hover:bg-white hover:bg-opacity-10">
             A propos
@@ -54,16 +69,20 @@
             class="rounded-lg text-lg text-blue-300 border-2 px-5 h-fit py-2 flex justify-center items-center hover:bg-white hover:bg-opacity-10">
             Mes expériences
           </button>
+          <button id="nav-contact"
+            class="rounded-lg text-lg text-blue-300 border-2 px-5 h-fit py-2 flex justify-center items-center hover:bg-white hover:bg-opacity-10">
+            Me contacter
+          </button>
         </div>
       </div>
   </main>
   <section class="flex flex-col gap-10 items-center py-10 min-h-screen">
-    <h2 id="a-propos" class="text-blue-300 text-6xl pt-10 font-poppins">Présentation</h2>
+    <h2 id="a-propos" class="text-blue-300 text-5xl pt-10 font-poppins text-center">Présentation</h2>
     <div class="w-5/6 bg-white p-5 rounded-md shadow-lg shadow-black h-fit">
       <div class="flex flex-col-reverse h-fit w-full lg:flex-row gap-10">
         <div class="flex w-full justify-center min-h-full flex-col gap-5 lg:w-1/2">
           <div class="text-blue-700 text-justify">
-            Anciennement développeur Hobbyiste en cursus littéraire, j'ai décidé de transformer ma passion en métier 
+            Anciennement développeur Hobbyiste en cursus littéraire, j'ai décidé de transformer ma passion en métier.
           </div>
           <div class="text-blue-700 text-justify">
             Que ce soit de petites applications en python comme un casse brique
@@ -71,12 +90,12 @@
             je n'ai jamais arrêté de le faire. 
           </div>
           <div class="text-blue-700 text-justify">
-            Je suis actuellement concepteur développeur d'application en alternance chez <a class="underline text-blue-500" href="https://www.diginamic.fr/">Diginamic </a>
+            Je suis actuellement concepteur développeur d'application en alternance chez <a class="underline text-blue-500" href="https://www.diginamic.fr/">Diginamic</a>
             et <a class="underline text-blue-500" href="https://www.tecken.fr/">Tecken</a>, tout en
             suivant une formation chez <a class="underline text-blue-500" href="https://www.diginamic.fr/"> Diginamic.</a>
-            En son sein, j'ai participé à la maintenance évolutive d'une application de gestion de l'entreprise
+            En son sein, j'ai participé à la maintenance évolutive d'une application de gestion de l'entreprise,
             j'ai créé des outils de développement pour accélerer le processus
-            de refonte de migration du front de Angular JS à Angular, et j'ai coréaliser avec un autre alternant
+            de migration du front de Angular JS à Angular, et j'ai coréaliser avec un autre alternant
             une application de suivie des stagiaires.
           </div>
         </div>
@@ -89,11 +108,11 @@
     </div>
   </section>
   <section class="flex flex-col gap-10 items-center py-10">
-    <h2 id="projets" class="text-blue-300 text-6xl pt-10 font-poppins">Mes projets</h2>
-    <div class="flex flex-wrap flex-col lg:flex-row w-full gap-10 justify-center items-start">
-      <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+    <h2 id="projets" class="text-blue-300 text-5xl pt-10 font-poppins text-center">Mes projets</h2>
+    <div class="flex flex-wrap flex-col lg:flex-row w-full gap-10 justify-center lg:items-start items-center">
+      <div class="bg-white flex-col flex w-full gap-4 bg-opacity-10 text-blue-300 lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
-          <h3 class="text-4xl text-center font-poppins">Spring-go</h3>
+          <h3 class=" w-4/5 text-4xl text-center font-poppins">Spring-go</h3>
           <a href="https://github.com/Cyber-cicco/spring-crud-go">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
@@ -103,20 +122,21 @@
           <div>
           </div>
           <div>Utilitaire en ligne de commande de génération de code pour les stacks Spring Boot / Angular</div>
+          <div>Voici ses fonctions : </div>
           <div>
-            Permet de créer le code de base pour un certain nombre de classes Java que l'on retrouve souvent dans un projet Spring boot,
-            comme les controllers, les dtos, les repositorys et les mappers, mais également les enums, les interfaces, les records...
+            Il permet de créer le code de base pour un certain nombre de classes Java. Cela inclue 
+            les controllers, les dtos, les repositorys et les mappers, mais également les enums, les interfaces, les records...
           </div>
           <div>
-            Permet de créer la structure de base d'un projet Spring Boot en définissant le nom des classes et leurs champs dans 
+            Il permet de créer la structure de base d'un projet Spring Boot en définissant le nom des classes et leurs champs dans 
             un fichier de configuration à partir d'une ligne de commande.
           </div>
           <div>
-            Permet de créer des interfaces typescript correspondant aux données envoyées par le back en analysant le code des 
+            Il permet de créer des interfaces typescript correspondant aux données envoyées par le back en analysant le code des 
             Dtos pour en déduire la structure des interfaces typescript
           </div>
           <div>
-            Permet de créer des services typescript correspondant aux points d'entrées de l'application back en analysant le code
+            Il permet de créer des services typescript correspondant aux points d'entrées de l'application back en analysant le code
             des controllers du back
           </div>
           <div class="font-semibold">
@@ -129,7 +149,7 @@
       </div>
       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
-          <h3 class="text-4xl text-center font-poppins">Gestionnaire d'absences</h3>
+          <h3 class=" w-4/5 text-4xl text-center font-poppins">Gestionnaire d'absences</h3>
           <a href="https://github.com/orgs/Diginamic-m03-Groupe4/repositories">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
@@ -139,19 +159,20 @@
           <div>
             Application web permettant à employés, managers et administrateurs de gérer les absences en entreprise.
           </div>
+          <div>Voici ses fonctions : </div>
           <div>
-            Permet aux employés de remplir un formulaire pour créer une demande d'absence. Le serveur vérifie ensuite 
-            certaines règles concernant ces demandes avant de l'insérer en base de données
+            Il permet aux employés de remplir un formulaire pour créer une demande d'absence. Le serveur vérifie ensuite 
+            certaines règles concernant ces demandes avant de l'insérer en base de données.
           </div>
           <div>
-            Permet aux employés de visualiser leurs demandes d'absences, validées ou non, ainsi que les jours fériés et les 
-            rtts employeurs
+            Il permet aux employés de visualiser leurs demandes d'absences, validées ou non, ainsi que les jours fériés et les 
+            rtts employeurs.
           </div>
           <div>
-            Permet aux managers de visualiser les demandes d'absences des employés de leur département, et des les valider ou non
+            Il permet aux managers de visualiser les demandes d'absences des employés de leur département, et des les valider ou non.
           </div>
           <div>
-            Permet aux administrateurs de choisir si les jours fériés sont travaillés ou non, et des poser les RTTs employeurs
+            Il permet aux administrateurs de choisir si les jours fériés sont travaillés ou non, et des poser les RTTs employeurs.
           </div>
           <div class="font-semibold">Contributeurs :</div>
           <div>Wilk Arnold, Goertz Juliette, Ciccoli Abel</div>
@@ -170,8 +191,8 @@
         </article>
       </div>
       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
-        <div class="flex justify-between w-full">
-          <h3 class="text-4xl text-center font-poppins">Open Food Facts</h3>
+        <div class="flex justify-between flex-wrap w-full">
+          <h3 class=" w-4/5 text-4xl text-center font-poppins">Open Food Facts</h3>
           <a href="https://github.com/Cyber-cicco/OpenFoodFacts">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
@@ -180,17 +201,17 @@
           <div class="font-semibold">Description : </div>
           <div>
             Application en ligne de commande permettant de récupérer un fichier CSV d'informations sur les valeurs nutritionnelles de différents aliments
-            pour les stocker en base de données
+            pour les stocker en base de données.
           </div>
           <div>
             Le fichier étant un export de données remplies à la main par des utilisateurs, cela a demandé de créer un lecteur et un analyseur de texte
-            permettant de supprimer les caractères inutiles
+            permettant de supprimer les caractères inutiles.
           </div>
           <div>
             Le fichier étant particulièrement volumineux, le but était d'optimiser le plus possible le temps de traitement du fichier
-            Pour cela, j'ai utilisé des techniques de traitement caractère par caractère inspiré des compilateurs pour éviter l'utilisation
+            Pour cela, j'ai utilisé des techniques de traitement de texte caractère par caractère inspiré des compilateurs pour éviter l'utilisation
             des regex lentes et des copies de chaines de caractères coûteuses en mémoire et en utilisation du processeur. J'ai également
-            fait appel aux Virtual Threads de Java 20, et au pool de connections ainsi qu'à l'insertion multiple et la création d'un cache
+            fait appel aux Virtual Threads de Java 20, et aux pools de connections ainsi qu'à l'insertion multiple et la création d'un cache
             à base de hashmaps.
           </div>
           <div>
@@ -207,7 +228,7 @@
       </div>
       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
-          <h3 class="text-4xl text-center font-poppins">Hold'em Calc</h3>
+          <h3 class=" w-4/5 text-4xl text-center font-poppins">Holdem-Calc</h3>
           <a href="https://github.com/Cyber-cicco/Holdem-Calc">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
@@ -216,14 +237,14 @@
             <div class="font-semibold">Description : </div>
           <div>
           </div>
-          <div>Utilitaire en ligne de commande permettant de calculer une approximation de l'équité d'une main au texas Hold'em en 1 contre 1</div>
+          <div>Utilitaire en ligne de commande permettant de calculer une approximation de l'équité d'une main au texas Hold'em en 1 contre 1.</div>
           <div>
-            Le but de cette application était de m'entrainer au Java avant la formation chez Diginamic. La comprendre nécessite
-            d'avoir quelques notions concernant <a class="underline text-blue-300" href="https://fr.wikipedia.org/wiki/Texas_hold%27em">les règles du poker</a>
+            Le but de cette application était de m'entrainer au Java avant la formation chez Diginamic, bien qu'elle ait été un peu retravaillée par la suite. La comprendre nécessite
+            d'avoir quelques notions concernant <a class="underline text-blue-300" href="https://fr.wikipedia.org/wiki/Texas_hold%27em">les règles du poker</a>.
           </div>
           <div>
             Au poker, on reçoit à chaque tour deux cartes, et l'on essaie d'obtenir la meilleure combinaison possible de cinq cartes
-            avec des cartes communes à tous les joueurs. Au début, on ne connait pas les cartes communes. Toutefois, certaines mains
+            avec des cartes communes à la fin du tour. Au début, on ne connait pas les cartes communes. Toutefois, certaines mains
             ont plus de chances de gagner que d'autres. Le but de l'application est de calculer ces chances.
           </div>
           <div>
@@ -240,7 +261,7 @@
       </div>
       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
-          <h3 class="text-4xl text-center font-poppins">Portfolio</h3>
+          <h3 class=" w-4/5 text-4xl text-center font-poppins">Portfolio</h3>
           <a href="https://github.com/Cyber-cicco/portfolio">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
@@ -249,9 +270,9 @@
             <div class="font-semibold">Description : </div>
           <div>
           </div>
-          <div>Site servant une simple page HTML dont le but est de me servir de CV en ligne tout en m'apprenant à utiliser Tailwind</div>
+          <div>Site servant une simple page HTML dont le but est de me servir de portfolio en ligne tout en m'apprenant à utiliser Tailwind.</div>
           <div>
-            Oui c'est bien de <a class="underline text-blue-300" href="#">ce site</a> dont je parle
+            Oui c'est bien de <a class="underline text-blue-300" href="#">ce site</a> dont je parle.
           </div>
           <div>
             Le but était de réussir à faire un site web responsive sans utiliser le moindre framework JavaScript, comme à mes débuts.
@@ -277,7 +298,7 @@
           <div>
           </div>
           <div>
-            Application web servant aux apprentis chez Diginamic en recherche d'un stage ou d'une alternance. Permet également
+            Application web servant aux apprentis chez Diginamic en recherche d'un stage ou d'une alternance. Permet 
             à la chargée de suivie de pouvoir être informée de leurs avancements.
           </div>
           <div>
@@ -312,7 +333,7 @@
       </div>   
        <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
-          <h3 class="text-4xl text-center font-poppins underline cursor-pointer"><a href="https://lpreaux.github.io/support-formation-diginamic/">Aide aux apprentis</a></h3>
+          <h3 class=" w-4/5 text-4xl text-center font-poppins"><a href="https://lpreaux.github.io/support-formation-diginamic/"></a>Aide aux apprentis</h3>
           <a href="https://github.com/lpreaux/support-formation-diginamic">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
@@ -322,15 +343,15 @@
           <div>
           </div>
           <div>
-            Application à but collaboratif permettant à toutes les personnes d'une session de résumer des cours et de les partager entre eux
+            Application à but collaboratif permettant à toutes les personnes d'une session de résumer des cours et de les partager entre eux.
           </div>
           <div>
             L'idée était d'utiliser un framework de création de documentation pour que les étudiants puissent se partager des cours, écrire
             des articles de blog, etc.
           </div>
           <div>
-            L'idée n'a pas forcément très bien marchée puisque le rythme de la formation étant soutenu, ils n'avaient pas forcément de temps à
-            consacrer à apprendre un nouveau framework, mais le site est toujours en ligne
+            L'idée n'a pas forcément très bien marché. Le rythme de la formation étant soutenu, ils n'avaient pas forcément de temps à
+            consacrer à apprendre un nouveau framework, mais le site est toujours en ligne.
          </div>
           <div class="font-semibold">Contributeurs :</div>
           <div>Preaux Lucas, Ciccoli Abel</div>
@@ -346,7 +367,7 @@
       </div>       
        <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
-          <h3 class="text-4xl text-center font-poppins">L'enquête de Mr White</h3>
+          <h3 class=" w-4/5 text-4xl text-center font-poppins">L'enquête de M. White</h3>
           <a href="https://github.com/Cyber-cicco/Code_names">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
@@ -356,7 +377,7 @@
           <div>
           </div>
           <div>
-            Clone sans pub de l'application undercover, en tant qu'application web à faire tourner sur son propre serveur
+            Clone sans pub de l'application undercover, en tant qu'application web à faire tourner sur son propre serveur.
           </div>
           <div>
             Mon premier projet web.
@@ -367,9 +388,9 @@
          </div>
          <div>
            Ensuite, l'application est faite de telle sorte à permettre de suivre 
-           <a class="underline text-blue-300" href="https://www.madmoizelle.com/undercover-jeu-smartphone-1027813">les règles du jeu Undercover</a>  
+           <a class="underline text-blue-300" href="https://www.madmoizelle.com/undercover-jeu-smartphone-1027813">les règles du jeu Undercover.</a>  
          </div>
-         <div>Enfin, le repo de l'application s'appel code names, pour une raison qui m'échappe, mais je laisse car je trouve ça drôle</div>
+         <div>Enfin, le repo de l'application s'appel code names, pour une raison qui m'échappe, mais je laisse pour la postérité.</div>
           <div class="font-semibold">
             <div class="flex gap-4 p-2 flex-wrap">
               <img class="h-[50px]" src="./img/html.png">
@@ -389,14 +410,14 @@
           <div>
           </div>
           <div>
-            Démo de jeu vidéo ayant pour but d'aboutir à un produit final bien plus grand que cela
+            Démo de jeu vidéo ayant pour but d'aboutir à un produit final bien plus grand que cela.
           </div>
           <div>
             Le jeu est en 2D, avec des combats au tour par tour. 
           </div>
           <div>
             Il est possible de se déplacer librement dans la démo, mais le produit finit a pour but d'avoir un gameplay plus 
-            proche du jeu de gestion, du visual novel et du point and click
+            proche du jeu de gestion, du visual novel et du point and click.
          </div>
           <div class="font-semibold">Quelques images : </div>
           <div class="flex gap-5 flex-col"></div>
@@ -430,7 +451,7 @@
     </div>
   </section>
   <section class="flex flex-col gap-10 items-center py-10">
-    <h2 id="competences" class="text-blue-300 text-6xl pt-10 font-poppins">Mes compétences</h2>
+    <h2 id="competences" class="text-blue-300 text-5xl pt-10 font-poppins text-center">Mes compétences</h2>
     <div class="w-4/5 bg-white p-5 rounded-md shadow-lg shadow-black h-fit">
       <div class="flex flex-col h-fit w-full gap-10">
         <div class="flex items-center justify-center w-full">
@@ -505,7 +526,7 @@
     </div>
   </section>
   <section class="flex flex-col gap-10 items-center py-10 min-h-screen">
-    <h2 id="experiences" class="text-blue-300 text-6xl pt-10 font-poppins">Mes expériences</h2>
+    <h2 id="experiences" class="text-blue-300 text-5xl pt-10 font-poppins text-center">Mes expériences</h2>
     <div class="w-4/5 bg-white p-5 rounded-xl lg:rounded-full shadow-lg shadow-black h-fit">
       <div class="flex items-center flex-col lg:flex-row h-fit w-full gap-10">
         <a href="https://www.diginamic.fr/" class="cursor-pointer flex gap-4 p-2 lg:w-1/4 flex-col gap-10 lg:flex-row justify-start h-full items-center flex-wrap">
@@ -515,9 +536,9 @@
         <div class="flex flex-col gap-5 items-start justify-start lg:w-3/5">
           <div class="font-poppins text-blue-900">décembre 2022 - ce jour</div>
           <div class="text-blue-700">
-            J'ai commencé en décembre 2023 une préparation à l'emploi collective (POEC) financée par l'état et délivré par Diginamic.
+            J'ai commencé en décembre 2023 une préparation à l'emploi collective (POEC) financée par l'état et délivrée par Diginamic.
             Après trois mois intenses couronnés de succès, il m'ont permis de continuer chez eux pour obtenir un Bac + 3/4 concepteur
-            développeur d'applications, et Tecken, une entreprise en étroite collaboration avec Diginamic, m'a pris en alternance.
+            développeur d'applications. Tecken, une entreprise en étroite collaboration avec Diginamic, m'a pris en alternance.
             J'ai ainsi pu faire de la maintenance évolutive de leur application de gestion d'entreprise, et créer une application de
             suivi des stagiaires.
           </div>
@@ -526,7 +547,7 @@
     </div>
     <div class="w-4/5 bg-white p-5 rounded-xl lg:rounded-full shadow-lg shadow-black h-fit">
       <div class="flex items-center flex-col lg:flex-row-reverse h-fit w-full gap-10">
-        <a href="https://www.diginamic.fr/" class="cursor-pointer flex gap-4 p-2 lg:w-1/4 flex-col gap-10 lg:flex-row-reverse justify-start h-full items-center flex-wrap">
+        <a href="https://www.tecken.fr/" class="cursor-pointer flex gap-4 p-2 lg:w-1/4 flex-col gap-10 lg:flex-row-reverse justify-start h-full items-center flex-wrap">
           <img class="object-cover rounded-full" src="./img/TECKEN.webp" alt="logo diginamic" >
           <h3 class="font-poppins text-blue-500 text-xl">Tecken</h3>
         </a>
@@ -542,6 +563,23 @@
       </div>
     </div>
     </section>  
+    <footer class="flex flex-col gap-10 py-10 bg-yellow justify-center">
+      <h2 id="contact" class="text-black text-5xl pt-10 font-poppins text-center">Me contacter</h2>
+      <div class="flex flex-col lg:flex-row justify-evenly gap-10 lg:gap-0 h-screen lg:h-fit">
+        <div class="flex flex-col lg:w-1/2 items-center gap-5">
+          <h3 class="text-3xl font-poppins px-10 text-center">Réseaux professionels</h3>
+          <div class="flex w-full justify-center px-10 gap-10">
+            <a href="https://www.linkedin.com/in/abel-ciccoli-891817184/"><img class="h-[75px]" src="./img/linkedin-logo-linkedin-icon-transparent-free-png.webp"></a>
+            <a href="https://github.com/Cyber-cicco"> <img class="h-[75px]" src="./img/github-mark/github-mark.png"></a>
+          </div>
+        </div>
+        <div class="flex flex-col items-center lg:w-1/2 gap-5">
+          <h3 class="text-3xl font-poppins px-10">Email</h3>
+          <div>abelcoli@outlook.fr</div>
+        </div>
+      </div>
+    </footer> 
+
   </div>
   <script src="./script.js" type="module"></script>
 </body>

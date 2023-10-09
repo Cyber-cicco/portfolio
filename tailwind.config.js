@@ -13,6 +13,7 @@
         },
         'light': '#EEEEEE',
         'black': '#191717',
+        'yellow': '#faff00'
 
       },
       fontFamily: {
