@@ -11,6 +11,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Deploy 🚀
-        uses: Cyber-cicco/github-pages-deploy-action@v4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: src # The folder the action should deploy.
+          folder: build # T
