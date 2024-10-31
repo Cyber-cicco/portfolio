@@ -29,13 +29,46 @@ const scroll = {
     behavior:"smooth",
 }
 
+let $ = (content) => document.querySelector(content);
+let $$ = (content) => document.querySelectorAll(content);
+const observerContructor = (animation) => {
+  return new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add(animation);
+        observer.unobserve(entry.target);
+      }
+    });
+  })
+}
+
 document.onload = async function() {
+  let reveals = $$('[data-fadein]');
+  let fadeLefts = $$('[data-fadeleft]');
+  let fadeRights = $$('[data-faderight]');
+  let fadeUps = $$('[data-fadeup]');
+  const revealObserver = observerContructor('fade-in');
+  const fadeLeftObserver = observerContructor('fade-left');
+  const fadeRightObserver = observerContructor('fade-right');
+  const fadeUpObserver = observerContructor('fade-up');
+  reveals.forEach(reveal => {
+      revealObserver.observe(reveal);
+  });
+  fadeLefts.forEach(reveal => {
+      fadeLeftObserver.observe(reveal);
+  });
+  fadeRights.forEach(reveal => {
+      fadeRightObserver.observe(reveal);
+  });
+  fadeUps.forEach(reveal => {
+      fadeUpObserver.observe(reveal);
+  });
+  //setTimeout(loadCanvas, 230);
   await titleWriting();
   await transitionCursorBlink();
   await subtitleWriting();
   await transitionCursorBlink();
   await descriptionWriting();
-  //setTimeout(loadCanvas, 230);  
   cursorBlink();
 }();
 
@@ -55,7 +88,7 @@ scroller(elExperiences, experiences);
 scroller(elContact, contact);
 
 bourger.addEventListener("click", (e)=> {
-  navPhone.style.display == "block" ? navPhone.style.display = "none" : navPhone.style.display = "block" 
+  navPhone.style.display == "block" ? navPhone.style.display = "none" : navPhone.style.display = "block"
 })
 
 let prevScrollpos = window.pageYOffset;
@@ -69,4 +102,4 @@ window.onscroll = function() {
     navPhone.style.display = "none"
   }
   prevScrollpos = currentScrollPos;
-} 
+}

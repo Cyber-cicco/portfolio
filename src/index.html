@@ -9,12 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="keywords" content="HTML,CSS,JavaScript">
   <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body class="bg-blue-700">
   <canvas class="absolute z-0 top-0 left-0" id="canvas">
   </canvas>
   <div class="absolute top-0 left-0 w-full">
-  <main class="z-30 bg-blue-700 bg-opacity-50 h-screen">
+  <main class="z-50 bg-blue-700 bg-opacity-50 h-screen">
     <nav id="navbar"
       class="fixed transition-top top-0 h-[70px] left-0 w-full flex lg:px-8 lg:justify-between justify-end items-center flex-row bg-opacity-70 bg-black">
       <div class="flex flex-row w-4/5 pl-2">
@@ -78,28 +79,30 @@
   </main>
   <section class="flex flex-col gap-10 items-center py-10 min-h-screen">
     <h2 id="a-propos" class="text-blue-300 text-5xl pt-10 font-poppins text-center">Présentation</h2>
-    <div class="w-5/6 bg-white p-5 rounded-md shadow-lg shadow-black h-fit">
+    <div data-fadein class="w-5/6 bg-white p-5 rounded-md shadow-lg shadow-black h-fit">
       <div class="flex flex-col-reverse h-fit w-full lg:flex-row gap-10">
-        <div class="flex w-full justify-center min-h-full flex-col gap-5 lg:w-1/2">
-          <div class="text-blue-700 text-justify">
-            Anciennement développeur Hobbyiste en cursus littéraire, j'ai décidé de transformer ma passion en métier.
+        <div class="flex text-blue-700 text-justify w-full justify-center min-h-full flex-col gap-5 lg:w-1/2">
+          <div data-faderight class="text-blue-700 text-justify">
+            <strong>Je suis actuellement concepteur développeur d'application fullstack en recherche d'alternance.</strong>
+            Je prépare actuellement un titre RNCP niveau 7 <strong>(bac +5)</strong> <a class="underline text-blue-500" href="https://www.diginamic.fr/"> Diginamic.</a>
+            J'ai <strong>un an et huit mois d'expérience</strong> dans le domaine du développement Java / Angular pour mon centre de formation.
           </div>
-          <div class="text-blue-700 text-justify">
-            Que ce soit de petites applications en python comme un casse brique
-            ou un utilitaire permettant à ma mère de renommer toutes ses photos de façon efficace, à partir du moment où j'ai appris à coder,
-            je n'ai jamais arrêté de le faire. 
+          <div data-faderight >
+            Détenteur d'un titre RNCP niveau 6, j'ai d'abord commencer en formation courte chez Diginamic. Content de ma prestation, ils m'ont permis
+            d'obtenir une dérogation auprès de la région pour passer un titre RNCP niveau 6 malgré mon niveau bac, et <strong>m'ont également pris en alternance.</strong>
+            Durant cette alternance, j'ai pu développer deux applications permettant aux apprenants de Diginamic de s'organiser pour leur recherche d'alternance.
+            Le nom de cette application est <a class="underline text-blue-500" href="https://digicap.sid-diginamic.fr">Digicap</a>
+            J'ai également travaillé sur la cvthèque de Diginamic, Digicap V2.
           </div>
-          <div class="text-blue-700 text-justify">
-            Je suis actuellement concepteur développeur d'application en alternance chez <a class="underline text-blue-500" href="https://www.diginamic.fr/">Diginamic</a>
-            et <a class="underline text-blue-500" href="https://www.tecken.fr/">Tecken</a>, tout en
-            suivant une formation chez <a class="underline text-blue-500" href="https://www.diginamic.fr/"> Diginamic.</a>
-            En son sein, j'ai participé à la maintenance évolutive d'une application de gestion de l'entreprise,
-            j'ai créé des outils de développement pour accélerer le processus
-            de migration du front de Angular JS à Angular, et j'ai coréaliser avec un autre alternant
-            une application de suivie des stagiaires.
+          <div data-faderight >
+            En tant que passionné de code, j'ai également pu créer <strong>des outils de développement</strong>, notamment un
+            <strong>générateur de code pour les stacks Spring Boot / Angular,
+            un framework pour Java utilisant Thymeleaf et HTMX, une grammaire tree-sitter pour thymeleaf et un générateur de données aléatoires pour Digicap V2</strong>.
+            J'ai également une grande passion pour l'art, plus particulièrement, le dessin, la musique et les jeux vidéos, m'ayant ammené à entreprendre de créer
+            de A à Z un jeu vidéo nommé <strong>Dernier Souffle</strong>, ce qui inclue le code, les dessins, l'histoire et la musique.
           </div>
         </div>
-        <div class="flex h-full items-center justify-center w-full lg:w-1/2">
+        <div data-fadeleft class="flex h-full items-center justify-center w-full lg:w-1/2">
           <div class="h-[250px] w-[250px] lg:h-[400px] lg:w-[400px]">
             <img class="rounded-full h-full min-w-full" src="./img/IMG-20230703-WA0090.jpg">
           </div>
@@ -110,13 +113,13 @@
   <section class="flex flex-col gap-10 items-center py-10">
     <h2 id="projets" class="text-blue-300 text-5xl pt-10 font-poppins text-center">Mes projets</h2>
     <div class="flex flex-wrap flex-col lg:flex-row w-full gap-10 justify-center lg:items-start items-center">
-      <div class="bg-white flex-col flex w-full gap-4 bg-opacity-10 text-blue-300 lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+      <div data-fadeup class="bg-white flex-col flex w-full gap-4 bg-opacity-10 text-blue-300 lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
           <h3 class=" w-4/5 text-4xl text-center font-poppins">Spring-go</h3>
           <a href="https://github.com/Cyber-cicco/spring-crud-go">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
             <div class="font-semibold">Description : </div>
           <div>
@@ -124,15 +127,15 @@
           <div>Utilitaire en ligne de commande de génération de code pour les stacks Spring Boot / Angular</div>
           <div>Voici ses fonctions : </div>
           <div>
-            Il permet de créer le code de base pour un certain nombre de classes Java. Cela inclue 
+            Il permet de créer le code de base pour un certain nombre de classes Java. Cela inclue
             les controllers, les dtos, les repositorys et les mappers, mais également les enums, les interfaces, les records...
           </div>
           <div>
-            Il permet de créer la structure de base d'un projet Spring Boot en définissant le nom des classes et leurs champs dans 
+            Il permet de créer la structure de base d'un projet Spring Boot en définissant le nom des classes et leurs champs dans
             un fichier de configuration à partir d'une ligne de commande.
           </div>
           <div>
-            Il permet de créer des interfaces typescript correspondant aux données envoyées par le back en analysant le code des 
+            Il permet de créer des interfaces typescript correspondant aux données envoyées par le back en analysant le code des
             Dtos pour en déduire la structure des interfaces typescript
           </div>
           <div>
@@ -147,13 +150,13 @@
           </div>
         </article>
       </div>
-      <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+      <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
           <h3 class=" w-4/5 text-4xl text-center font-poppins">Gestionnaire d'absences</h3>
           <a href="https://github.com/orgs/Diginamic-m03-Groupe4/repositories">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
           <div class="font-semibold">Description : </div>
           <div>
@@ -161,11 +164,11 @@
           </div>
           <div>Voici ses fonctions : </div>
           <div>
-            Il permet aux employés de remplir un formulaire pour créer une demande d'absence. Le serveur vérifie ensuite 
+            Il permet aux employés de remplir un formulaire pour créer une demande d'absence. Le serveur vérifie ensuite
             certaines règles concernant ces demandes avant de l'insérer en base de données.
           </div>
           <div>
-            Il permet aux employés de visualiser leurs demandes d'absences, validées ou non, ainsi que les jours fériés et les 
+            Il permet aux employés de visualiser leurs demandes d'absences, validées ou non, ainsi que les jours fériés et les
             rtts employeurs.
           </div>
           <div>
@@ -190,13 +193,13 @@
           </div>
         </article>
       </div>
-      <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+      <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between flex-wrap w-full">
           <h3 class=" w-4/5 text-4xl text-center font-poppins">Open Food Facts</h3>
           <a href="https://github.com/Cyber-cicco/OpenFoodFacts">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
           <div class="font-semibold">Description : </div>
           <div>
@@ -215,7 +218,7 @@
             à base de hashmaps.
           </div>
           <div>
-            L'objectif de 35 minutes pour traiter le fichier a donc été largement dépassé, avec un temps de traitement durant entre 10 et 
+            L'objectif de 35 minutes pour traiter le fichier a donc été largement dépassé, avec un temps de traitement durant entre 10 et
             20 secondes.
           </div>
           <div class="font-semibold">
@@ -226,13 +229,13 @@
           </div>
         </article>
       </div>
-      <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+      <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
           <h3 class=" w-4/5 text-4xl text-center font-poppins">Holdem-Calc</h3>
           <a href="https://github.com/Cyber-cicco/Holdem-Calc">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
             <div class="font-semibold">Description : </div>
           <div>
@@ -259,13 +262,13 @@
           </div>
         </article>
       </div>
-      <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+      <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
           <h3 class=" w-4/5 text-4xl text-center font-poppins">Portfolio</h3>
           <a href="https://github.com/Cyber-cicco/portfolio">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
             <div class="font-semibold">Description : </div>
           <div>
@@ -289,20 +292,20 @@
           </div>
         </article>
       </div>
-       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+       <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
           <h3 class="text-4xl text-center font-poppins">Suivi des stagiaires</h3>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
             <div class="font-semibold">Description : </div>
           <div>
           </div>
           <div>
-            Application web servant aux apprentis chez Diginamic en recherche d'un stage ou d'une alternance. Permet 
+            Application web servant aux apprentis chez Diginamic en recherche d'un stage ou d'une alternance. Permet
             à la chargée de suivie de pouvoir être informée de leurs avancements.
           </div>
           <div>
-            Le stagiaire a de son coté accès à une page de profil, qu'il doit remplir avec ses informations personnelles, son CV et une 
+            Le stagiaire a de son coté accès à une page de profil, qu'il doit remplir avec ses informations personnelles, son CV et une
             lettre de motivation type. D'un autre coté, il a également accès à un tableau Kanban à partir duquel il peut créer de nouvelles
             candidatures et gérer leurs états, comme "j'ai candidaté", "je relance", "entretien décroché!".
           </div>
@@ -330,14 +333,14 @@
             </div>
           </div>
         </article>
-      </div>   
-       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+      </div>
+       <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
           <h3 class=" w-4/5 text-4xl text-center font-poppins"><a href="https://lpreaux.github.io/support-formation-diginamic/"></a>Aide aux apprentis</h3>
           <a href="https://github.com/lpreaux/support-formation-diginamic">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
             <div class="font-semibold">Description : </div>
           <div>
@@ -364,14 +367,14 @@
             </div>
           </div>
         </article>
-      </div>       
-       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
+      </div>
+       <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 w-full lg:w-2/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-between w-full">
           <h3 class=" w-4/5 text-4xl text-center font-poppins">L'enquête de M. White</h3>
           <a href="https://github.com/Cyber-cicco/Code_names">
             <img class="h-[50px]" src="./img/github-mark/github-mark-white.png">
           </a>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
             <div class="font-semibold">Description : </div>
           <div>
@@ -387,8 +390,8 @@
             on s'y connecte par un téléphone lui aussi connecté au wifi.
          </div>
          <div>
-           Ensuite, l'application est faite de telle sorte à permettre de suivre 
-           <a class="underline text-blue-300" href="https://www.madmoizelle.com/undercover-jeu-smartphone-1027813">les règles du jeu Undercover.</a>  
+           Ensuite, l'application est faite de telle sorte à permettre de suivre
+           <a class="underline text-blue-300" href="https://www.madmoizelle.com/undercover-jeu-smartphone-1027813">les règles du jeu Undercover.</a>
          </div>
          <div>Enfin, le repo de l'application s'appel code names, pour une raison qui m'échappe, mais je laisse pour la postérité.</div>
           <div class="font-semibold">
@@ -400,11 +403,11 @@
             </div>
           </div>
         </article>
-      </div>       
-       <div class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 lg:w-4/5 border-2 p-5 border-blue-300 rounded-lg">
+      </div>
+       <div data-fadeup class="bg-white flex-col flex gap-4 bg-opacity-10 text-blue-300 lg:w-4/5 border-2 p-5 border-blue-300 rounded-lg">
         <div class="flex justify-center w-full">
           <h3 class="text-4xl text-center font-poppins">Dernier souffle</h3>
-        </div>  
+        </div>
         <article class="text-white text-lg text-justify font-sans flex flex-col gap-4">
           <div class="font-semibold">Description : </div>
           <div>
@@ -413,15 +416,15 @@
             Démo de jeu vidéo ayant pour but d'aboutir à un produit final bien plus grand que cela.
           </div>
           <div>
-            Le jeu est en 2D, avec des combats au tour par tour. 
+            Le jeu est en 2D, avec des combats au tour par tour.
           </div>
           <div>
-            Il est possible de se déplacer librement dans la démo, mais le produit finit a pour but d'avoir un gameplay plus 
+            Il est possible de se déplacer librement dans la démo, mais le produit finit a pour but d'avoir un gameplay plus
             proche du jeu de gestion, du visual novel et du point and click.
          </div>
           <div class="font-semibold">Quelques images : </div>
           <div class="flex gap-5 flex-col"></div>
-          <div class="flex flex-col lg:flex-row gap-10 justify-between items-center"> 
+          <div class="flex flex-col lg:flex-row gap-10 justify-between items-center">
             <div>Une boite de dialogue</div>
             <img class="lg:w-3/5 rounded-lg border-blue-300 border-2 shadow-md shadow-white" alt="image du jeu" src="./img/JV_1.png">
           </div>
@@ -447,7 +450,7 @@
             </div>
           </div>
         </article>
-      </div>       
+      </div>
     </div>
   </section>
   <section class="flex flex-col gap-10 items-center py-10">
@@ -555,14 +558,14 @@
           <div class="font-poppins text-blue-900">avril 2023 - ce jour</div>
           <div class="text-blue-700">
             J'ai commencé le premier avril 2023 un alternance dans l'entreprise Tecken, au service de Diginamic.
-            C'est ici que j'ai fait de la maintenance évolutive du SID (Système d'Information Diginamic) et que 
+            C'est ici que j'ai fait de la maintenance évolutive du SID (Système d'Information Diginamic) et que
             j'ai co-réalisé l'application de suivi des stagiaires.
             Actuellement, ils cherchent une entreprise dans laquelle me placer en tant que prestataire externe.
           </div>
         </div>
       </div>
     </div>
-    </section>  
+    </section>
     <footer class="flex flex-col gap-10 py-10 bg-yellow justify-center">
       <h2 id="contact" class="text-black text-5xl pt-10 font-poppins text-center">Me contacter</h2>
       <div class="flex flex-col lg:flex-row justify-evenly gap-10 lg:gap-0 h-screen lg:h-fit">
@@ -578,7 +581,7 @@
           <div>abelcoli@outlook.fr</div>
         </div>
       </div>
-    </footer> 
+    </footer>
 
   </div>
   <script src="./script.js" type="module"></script>
