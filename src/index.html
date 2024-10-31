@@ -15,13 +15,13 @@
   <canvas class="absolute z-0 top-0 left-0" id="canvas">
   </canvas>
   <div class="absolute top-0 left-0 w-full">
-  <main class="z-50 bg-blue-700 bg-opacity-50 h-screen">
+  <main style="z-index: 1000; position: relative;" class="bg-blue-700 bg-opacity-50 h-screen">
     <nav id="navbar"
       class="fixed transition-top top-0 h-[70px] left-0 w-full flex lg:px-8 lg:justify-between justify-end items-center flex-row bg-opacity-70 bg-black">
       <div class="flex flex-row w-4/5 pl-2">
         <h1 class="font-poppins text-white">Ciccoli A. Développeur fullstack</h1>
       </div>
-      <li class="flex-none hidden lg:flex">
+      <li style="z-index: 100" class="flex-none hidden lg:flex">
         <ol id="nav-accueil" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">Accueil</ol>
         <ol id="nav-a-propos" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">A propos</ol>
         <ol id="nav-projets" class="hover:bg-white hover:bg-opacity-10 cursor-pointer font-semibold px-9 text-white h-full py-5">Projets</ol>
