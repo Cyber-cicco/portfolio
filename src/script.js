@@ -1,8 +1,6 @@
 import { titleWriting } from './js/writing-functions.js';
 import { cursorBlink, transitionCursorBlink } from './js/cursor-functions.js';
 import { subtitleWriting } from './js/writing-functions.js';
-import { descriptionWriting } from './js/writing-functions.js';
-import { loadCanvas } from './lib/particles.js';
 
 const bourger = document.getElementById('bourger')
 const navPhone = document.getElementById('nav-phone')
@@ -24,6 +22,8 @@ const experiences = document.querySelector('#experiences')
 
 const elContact = document.querySelectorAll('#nav-contact')
 const contact = document.querySelector('#contact')
+
+const presentationContainer = document.getElementById("presentation")
 
 const scroll = {
     behavior:"smooth",
@@ -52,7 +52,7 @@ document.onload = async function() {
   const fadeRightObserver = observerContructor('fade-right');
   const fadeUpObserver = observerContructor('fade-up');
   reveals.forEach(reveal => {
-      revealObserver.observe(reveal);
+    revealObserver.observe(reveal);
   });
   fadeLefts.forEach(reveal => {
       fadeLeftObserver.observe(reveal);
@@ -67,8 +67,8 @@ document.onload = async function() {
   await titleWriting();
   await transitionCursorBlink();
   await subtitleWriting();
-  await transitionCursorBlink();
-  await descriptionWriting();
+  presentationContainer.style.opacity = 1;
+  presentationContainer.style.transition = "opacity 1s";
   cursorBlink();
 }();
 

@@ -11,14 +11,31 @@
   animation-fill-mode: forwards;
 }
 
+@keyframes color-animation {
+  0% {
+    color: #ffffff;
+  }
+  100% {
+    color: #64CCC5;
+  }
+}
+
+.nav-hover {
+  &:hover{
+    animation: color-animation 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+}
+
 @keyframes fadeLeftAnimation {
 0% {
-  transform: translateX(-100px);
+  transform: translatex(-100px);
   opacity: 0;
 }
 100% {
   opacity: 1;
-  transform: translateX(0px);
+  transform: translatex(0px);
 }
 }
 

@@ -1,5 +1,4 @@
 const textContainer = document.querySelector('#text-container');
-const presentationContainer = document.getElementById("presentation")
 
 const portfolioContent = {
   title: 'Bienvenue.',
@@ -29,7 +28,7 @@ export const titleWriting = async () => {
         clearInterval(interval);
         resolve();
       }
-    }, 20);
+    }, 10);
   })
 }
 export const subtitleWriting = async () => {
@@ -54,7 +53,7 @@ export const subtitleWriting = async () => {
         clearInterval(interval);
         resolve();
       }
-    }, 20);
+    }, 10);
   })
 }
 export const descriptionWriting = async () => {
@@ -78,11 +77,8 @@ export const descriptionWriting = async () => {
         i++;
       } else {
         clearInterval(interval);
-        presentationContainer.style.opacity = 1;
-        presentationContainer.style.transition = "opacity 1s";
-        console.log(presentationContainer.style)
         resolve();
       }
-    }, 20);
+    }, 10);
   })
 }
